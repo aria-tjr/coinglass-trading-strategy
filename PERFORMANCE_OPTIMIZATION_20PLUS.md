@@ -1,3 +1,5 @@
+> ⚠️ **Read first:** the percentages in this document are targets and expected impacts, not measured results.
+
 # 🚀 PERFORMANCE OPTIMIZATION FOR 20%+ ANNUAL RETURNS
 
 ## 📊 Executive Summary

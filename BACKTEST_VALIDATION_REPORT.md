@@ -1,3 +1,5 @@
+> ⚠️ **Read first:** the results below come from `working_backtest.py`, which runs on the bundled `GOOG` stock sample data with **simulated** sentiment, not on crypto or real CoinGlass data. See README → Backtest status.
+
 # 🎯 **COMPREHENSIVE BACKTEST VALIDATION REPORT**
 
 **Implementation of Industry Best Practices for Crypto Trading Bot Validation**
