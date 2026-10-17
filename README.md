@@ -275,7 +275,7 @@ There is **no backtest of the live strategy (`src/strategy/engine.py`) on real C
 
 - `working_backtest.py` (source of the figures in `BACKTEST_VALIDATION_REPORT.md`) runs on the `GOOG` stock sample data bundled with the `backtesting` library, and its "CoinGlass sentiment" is **simulated** (a sine wave plus a momentum term). It says nothing about crypto or CoinGlass.
 - `working_20_percent_strategy.py` (source of the "27.2% annual return on AVAX" in `OPTIMAL_20_PERCENT_STRATEGY.md`) is a separate SMA/RSI strategy on daily Yahoo Finance prices. It uses no CoinGlass data, and the best of four parameter sets was picked on the same 2-year window it reports (in-sample), so the figure is optimistic.
-- `quick_backtest.py` generates random price data.
+- `quick_backtest.py` also runs on the `GOOG` sample data, with funding-rate and long/short-ratio inputs synthesised from price plus random noise.
 - The 20%+ figures in `PERFORMANCE_OPTIMIZATION_20PLUS.md` and `COMPREHENSIVE_NEXT_STEPS.md` are targets or extrapolations, not results.
 
 ## ⚠️ Disclaimer
