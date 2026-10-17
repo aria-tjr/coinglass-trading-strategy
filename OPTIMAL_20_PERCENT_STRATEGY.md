@@ -1,3 +1,5 @@
+> ⚠️ **Read first:** the 27.2% AVAX figure below is an **in-sample** result of `working_20_percent_strategy.py` (SMA/RSI on daily Yahoo Finance data, best of 4 parameter sets chosen on the same 2-year window). It uses no CoinGlass data and is not the live bot's strategy. "Proven" overstates it. See README → Backtest status.
+
 # 🎯 **OPTIMAL 20%+ ANNUAL RETURN STRATEGY**
 
 ## **PROVEN RESULTS: 27.2% ANNUAL RETURN ACHIEVED**

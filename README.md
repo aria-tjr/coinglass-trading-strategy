@@ -1,6 +1,6 @@
 # 🚀 Telegram CoinGlass Trader
 
-A production-grade, asynchronous Python 3.11 crypto trading bot designed for Bybit USDT perpetual futures. Combines CoinGlass market data with technical analysis for low-risk, high-stability trading with Telegram control interface.
+An experimental, asynchronous Python 3.11 crypto trading bot designed for Bybit USDT perpetual futures. Combines CoinGlass market data with technical analysis for low-risk, high-stability trading with Telegram control interface.
 
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -16,7 +16,7 @@ A production-grade, asynchronous Python 3.11 crypto trading bot designed for Byb
 
 ## 📊 Trading Strategy
 
-The bot targets 20-30% annual compound returns with low risk by:
+The design goal (a target, **not** a measured result — see [Backtest status](#backtest-status)) is 20-30% annual compound returns with low risk by:
 
 1. **Signal Generation**: Requiring confluence of multiple factors:
    - CoinGlass sentiment analysis (funding rates, OI changes, long/short ratios)
@@ -64,8 +64,8 @@ src/
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
-   cd telegram_coinglass_trader
+   git clone https://github.com/aria-tjr/coinglass-trading-strategy.git
+   cd coinglass-trading-strategy
    ```
 
 2. **Install dependencies**:
@@ -267,6 +267,16 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Bybit](https://bybit.com/) for trading infrastructure
 - [CCXT](https://github.com/ccxt/ccxt) for exchange integration
 - [pandas-ta](https://github.com/twopirllc/pandas-ta) for technical analysis
+
+
+## Backtest status
+
+There is **no backtest of the live strategy (`src/strategy/engine.py`) on real CoinGlass data** in this repo yet. What the existing scripts and reports actually test:
+
+- `working_backtest.py` (source of the figures in `BACKTEST_VALIDATION_REPORT.md`) runs on the `GOOG` stock sample data bundled with the `backtesting` library, and its "CoinGlass sentiment" is **simulated** (a sine wave plus a momentum term). It says nothing about crypto or CoinGlass.
+- `working_20_percent_strategy.py` (source of the "27.2% annual return on AVAX" in `OPTIMAL_20_PERCENT_STRATEGY.md`) is a separate SMA/RSI strategy on daily Yahoo Finance prices. It uses no CoinGlass data, and the best of four parameter sets was picked on the same 2-year window it reports (in-sample), so the figure is optimistic.
+- `quick_backtest.py` also runs on the `GOOG` sample data, with funding-rate and long/short-ratio inputs synthesised from price plus random noise.
+- The 20%+ figures in `PERFORMANCE_OPTIMIZATION_20PLUS.md` and `COMPREHENSIVE_NEXT_STEPS.md` are targets or extrapolations, not results.
 
 ## ⚠️ Disclaimer
 

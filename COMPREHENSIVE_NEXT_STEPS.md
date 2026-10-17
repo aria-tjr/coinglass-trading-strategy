@@ -1,3 +1,5 @@
+> ⚠️ **Read first:** return figures here are targets or come from the in-sample AVAX test described in README → Backtest status. They are not validated results.
+
 # 🚀 **COMPREHENSIVE NEXT STEPS: 20%+ ANNUAL RETURN SYSTEM**
 
 ## **EXECUTIVE SUMMARY**
